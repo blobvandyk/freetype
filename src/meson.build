@@ -11,18 +11,18 @@ subdir('smooth')
 subdir('type1')
 subdir('type42')
 subdir('winfonts')
+subdir('autofit')
+subdir('bdf')
+subdir('cff')
+subdir('pshinter')
 
-#subdir('autofit')
-#subdir('bdf')
 #subdir('bzip2')
 #subdir('cache')
-#subdir('cff')
 #subdir('cid')
 #subdir('gxvalid')
 #subdir('gzip')
 #subdir('lzw')
 #subdir('otvalid')
-#subdir('pshinter')
 #subdir('tools')
 
 configure_file(
@@ -45,7 +45,11 @@ libfreetype = shared_library('freetype',
             smooth_src,
             type1_src,
             type42_src,
-            winfonts_src
+            winfonts_src,
+            autofit_src,
+            bdf_src,
+            cff_src,
+            pshinter_src
         ],
         include_directories: incdir,
         c_args: build_flags)
