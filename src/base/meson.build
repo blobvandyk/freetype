@@ -1,4 +1,5 @@
 base_src = [
+    'base/ftinit.c',
     'base/ftadvanc.c',
     'base/ftcalc.c',
     'base/ftdbgmem.c',

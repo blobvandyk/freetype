@@ -6,7 +6,7 @@ configure_file(
         output: 'ftconfig.h',
         configuration: configuration_data())
 
-build_flags = '-DFT2_BUILD_LIBRARY -DHAVE_FCNTL_H -DHAVE_UNISTD_H'
+build_flags = '-DFT2_BUILD_LIBRARY'
 
 libfreetype = shared_library('freetype',
         [
