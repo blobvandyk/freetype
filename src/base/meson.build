@@ -11,7 +11,8 @@ base_src = [
     'base/fttrigon.c',
     'base/ftutil.c',
     'base/basepic.c',
-    'base/ftpic.c'
+    'base/ftpic.c',
+    '../builds/unix/ftsystem.c'
     ]
 
 #if compiling_for_osx
