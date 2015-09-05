@@ -1,8 +1,10 @@
-#if compiling_for_osx
-#base_mac_src = ['ftmac.c']
-#else
-    base_mac_src = []
-#endif
+if target_machine.system() == 'osx'
+    system_src = ['base/frmac.c']
+elif target_machine.system() == 'linux'
+    system_src = ['../builds/unix/ftsystem.c']
+else
+    system_src = ['base/ftsystem.c']
+endif
 
 base_src = [
     'base/ftinit.c',
@@ -20,13 +22,6 @@ base_src = [
     'base/basepic.c',
     'base/ftpic.c',
     'base/ftbitmap.c',
-    '../builds/unix/ftsystem.c',
-    base_mac_src
+    system_src
     ]
-
-#libbase_static = static_library('base',
-#[base_src, base_mac_src],
-#include_directories: incdir,
-#c_args: build_flags)
-
 
