@@ -16,12 +16,12 @@ subdir('bdf')
 subdir('cff')
 subdir('pshinter')
 subdir('cid')
+subdir('gzip')
+subdir('lzw')
 
 #subdir('bzip2')
 #subdir('cache')
 #subdir('gxvalid')
-#subdir('gzip')
-#subdir('lzw')
 #subdir('otvalid')
 #subdir('tools')
 
@@ -50,7 +50,9 @@ libfreetype = shared_library('freetype',
             bdf_src,
             cff_src,
             pshinter_src,
-            cid_src
+            cid_src,
+            gzip_src,
+            lzw_src
         ],
         include_directories: incdir,
         c_args: build_flags)
