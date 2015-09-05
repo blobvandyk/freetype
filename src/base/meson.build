@@ -1,3 +1,9 @@
+#if compiling_for_osx
+#base_mac_src = ['ftmac.c']
+#else
+    base_mac_src = []
+#endif
+
 base_src = [
     'base/ftinit.c',
     'base/ftadvanc.c',
@@ -13,14 +19,9 @@ base_src = [
     'base/ftutil.c',
     'base/basepic.c',
     'base/ftpic.c',
-    '../builds/unix/ftsystem.c'
+    '../builds/unix/ftsystem.c',
+    base_mac_src
     ]
-
-#if compiling_for_osx
-#base_mac_src = ['ftmac.c']
-#else
-    base_mac_src = []
-#endif
 
 #libbase_static = static_library('base',
 #[base_src, base_mac_src],
