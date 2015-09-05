@@ -19,6 +19,7 @@ base_src = [
     'base/ftutil.c',
     'base/basepic.c',
     'base/ftpic.c',
+    'base/ftbitmap.c',
     '../builds/unix/ftsystem.c',
     base_mac_src
     ]
