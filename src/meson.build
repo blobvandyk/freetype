@@ -15,10 +15,10 @@ subdir('autofit')
 subdir('bdf')
 subdir('cff')
 subdir('pshinter')
+subdir('cid')
 
 #subdir('bzip2')
 #subdir('cache')
-#subdir('cid')
 #subdir('gxvalid')
 #subdir('gzip')
 #subdir('lzw')
@@ -49,7 +49,8 @@ libfreetype = shared_library('freetype',
             autofit_src,
             bdf_src,
             cff_src,
-            pshinter_src
+            pshinter_src,
+            cid_src
         ],
         include_directories: incdir,
         c_args: build_flags)
