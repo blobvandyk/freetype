@@ -32,7 +32,7 @@ configure_file(
 
 build_flags = '-DFT2_BUILD_LIBRARY'
 
-libfreetype = shared_library('freetype',
+libfreetype = library('freetype',
         [
             base_src,
             truetype_src,
